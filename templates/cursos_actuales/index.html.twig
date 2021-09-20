@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salsa Bachata Online{% endblock %}
+
+{% block body %}
+<style>
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</style>
+
+  <div class="starter-template text-center">
+    <h1 class="display-5">Cursos</h1>
+    <p class="lead"></p>
+    <h3></h3>
+    <p class="lead">Cursos especializados en Bachata y Salsa con los Mejores profesores. </p>
+    <p class="lead font-weight"></p>
+    <h4>Publicamos un nuevo curso cada mes</h4>
+  </div>
+
+  <div class="example-wrapper">
+    <!-- Sección Cursos -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="images/clases-online-de-salsa-basi-y-deisy.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SALSA ON1 – BASI Y DEISY</h5>
+            <p class="card-text">Con este curso aprenderas a bailar Salsa en Línea ON1.</p>
+            <button type="button" class="btn btn-outline-primary btn-block">
+                Ver más...
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/clases-de-bachata-online-basi-y-deisy.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BACHATA ELEGANTE BASI Y DEISY – VOL1</h5>
+            <p class="card-text">Con este curso aprenderas a bailar Bachata.</p>
+            <button type="button" class="btn btn-outline-primary btn-block">
+                Ver más...
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/bachata-estilo-femenino-deisy-carrera.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BACHATA LADY STYLE NIVEL BÁSICO-MEDIO</h5>
+            <p class="card-text">Con este curso aprenderas a bailar Lady Styles Básico.</p>
+            <button type="button" class="btn btn-outline-primary btn-block">
+                Ver más...
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+{% endblock %}

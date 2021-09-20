@@ -1,9 +1,10 @@
 body{
-  padding-bottom: 100px;
+  /*padding-bottom: 100px;*/
 }
 
 .footer {
-  position:fixed;
+  /*position:fixed;*/
+  margin-top: 100px;
   left:0px;
   bottom:0px;
   height:60px;

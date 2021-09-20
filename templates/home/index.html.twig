@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Fondos{% endblock %}
+{% block title %}Salsa Bachata Online{% endblock %}
 
 {% block stylesheets %}
   {{ parent() }}
@@ -8,17 +8,9 @@
 {% endblock %}
 
 {% block body %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Bachata Salsa Online</a>
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-        <a class="nav-link" href="">Cursos</a>
-    </li>
-  </ul>
-  <form class="form-inline">
-    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Login</button>
-  </form>
-</nav>
+
+{{ include('comunes/_header.html.twig') }}
+
 <main class="container">
   
   <div class="starter-template text-center py-5 px-3">
@@ -27,260 +19,27 @@
     <img src="images/clases-online-de-bachata.png" class="img-fluid" width="60%" height="60%" alt="...">
     <h1 class="display-5">Nunca antes fue tan fácil aprender a bailar bachata y Salsa</h1>
     <p class="lead">Aprende Bachata   y salsa desde la comodidad de tu casa a tu ritmo. En cada clase se explica la técnica , la elegancia , la fluidez , la musicalidad .  Estudiantes de todo el mundo están conseguiendo en muy poco tiempo lo que otros tardan años . Accede a todos los contenidos y nota tu mejora !</p>
-    <h1 class="display-5">Cursos</h1>
-    <p class="lead"></p>
-    <h3></h3>
-    <p class="lead">Cursos especializados en Bachata y Salsa con los Mejores profesores. </p>
-    <p class="lead font-weight"></p>
-    <h4>Publicamos un nuevo curso cada mes</h4>
   </div>
 
-  <!-- Sección Cursos -->
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="images/clases-online-de-salsa-basi-y-deisy.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">SALSA ON1 – BASI Y DEISY</h5>
-          <p class="card-text">Con este curso aprenderas a bailar Salsa en Línea ON1.</p>
-          <button type="button" class="btn btn-outline-primary btn-block">
-              Ver más...
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="images/clases-de-bachata-online-basi-y-deisy.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">BACHATA ELEGANTE BASI Y DEISY – VOL1</h5>
-          <p class="card-text">Con este curso aprenderas a bailar Bachata.</p>
-          <button type="button" class="btn btn-outline-primary btn-block">
-            Ver más...
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="images/bachata-estilo-femenino-deisy-carrera.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">BACHATA LADY STYLE NIVEL BÁSICO-MEDIO</h5>
-          <p class="card-text">Con este curso aprenderas a bailar Lady Styles Básico.</p>
-          <button type="button" class="btn btn-outline-primary btn-block">
-            Ver más...
-          </button>
-        </div>
-      </div>
-    </div>
-  </div> 
+  <!-- Cursos Actuales -->
+  {{ include('cursos_actuales/index.html.twig') }}
 
-  <div class="row">
-    <button type="button" class="btn btn-primary btn-block">
-      Ver todos los cursos
-    </button>
-  </div> 
+  <div class="row py-5 px-3">
+    <div class="col-lg-6 offset-lg-3">
+      <button type="button" class="btn btn-primary btn-block">
+        Ver todos los cursos
+      </button>
+    </div>
+  </div>
 
-
-  <!-- Pricing section-->
-            <section class="bg-light py-5">
-                <div class="container px-5 my-5">
-                    <div class="text-center mb-5">
-                        <h1 class="fw-bolder">Cuenta Premium </h1>
-                        <p class="lead fw-normal text-muted mb-0">Acceso ilimitado</p>
-                    </div>
-                    <div class="row gx-5 justify-content-center">
-                        <!-- Pricing card free-->
-                        <!--
-                        <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
-                                <div class="card-body p-5">
-                                    <div class="small text-uppercase fw-bold text-muted">Free</div>
-                                    <div class="mb-3">
-                                        <span class="display-4 fw-bold">$0</span>
-                                        <span class="text-muted">/ mo.</span>
-                                    </div>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            <strong>1 users</strong>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            5GB storage
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Unlimited public projects
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Community access
-                                        </li>
-                                        <li class="mb-2 text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Unlimited private projects
-                                        </li>
-                                        <li class="mb-2 text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Dedicated support
-                                        </li>
-                                        <li class="mb-2 text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Free linked domain
-                                        </li>
-                                        <li class="text-muted">
-                                            <i class="bi bi-x"></i>
-                                            Monthly status reports
-                                        </li>
-                                    </ul>
-                                    <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-                        <!-- Pricing card pro-->
-                        <div class="col-lg-6 col-xl-4">
-                            <div class="card mb-5 mb-xl-0">
-                                <div class="card-body p-5">
-                                    <div class="small text-uppercase fw-bold">
-                                        <i class="bi bi-star-fill text-warning"></i>
-                                        Premium
-                                    </div>
-                                    <div class="mb-3">
-                                        <span class="display-4 fw-bold">9€</span>
-                                        <span class="text-muted">Mensual</span>
-                                    </div>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            <strong>Acceso a todos los cursos</strong>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Incluye todos los Profesores
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Contenidos nuevos todas los meses
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Soporte y ayuda de todas las clases de Basi y Deisy
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Este precio se te mantiene siempre que mantengas tu Suscripción activa
-                                        </li>                            
-                                    </ul>
-                                    <div class="d-grid"><a class="btn btn-primary btn-block" href="#!">Seleccionar Plan</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Pricing card enterprise-->
-                        <!--
-                        <div class="col-lg-6 col-xl-4">
-                            <div class="card">
-                                <div class="card-body p-5">
-                                    <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                                    <div class="mb-3">
-                                        <span class="display-4 fw-bold">$49</span>
-                                        <span class="text-muted">/ mo.</span>
-                                    </div>
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            <strong>Unlimited users</strong>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            5GB storage
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Unlimited public projects
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Community access
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Unlimited private projects
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Dedicated support
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-check text-primary"></i>
-                                            <strong>Unlimited</strong>
-                                            linked domains
-                                        </li>
-                                        <li class="text-muted">
-                                            <i class="bi bi-check text-primary"></i>
-                                            Monthly status reports
-                                        </li>
-                                    </ul>
-                                    <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-                    </div>
-                </div>
-            </section>
+  <!-- Precios -->
+  {{ include('precios/index.html.twig') }}
 
   <!-- Próximos Cursos -->
-  <div class="starter-template text-center py-5 px-3">
-    <h1 class="display-5">Calendario de Próximos Cursos</h1>
-    <p class="lead"></p>
-    <h4>Todos los meses subimos un Curso Nuevo.</h4>
-    <p class="lead">Estos son los cursos que subiremos en los proximos meses:</p>
-    <p class="lead font-weight"></p>
-  </div>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="images/bachata-dominicana-Basi-y-Deisy-2.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">OCTUBRE 2021</h5>
-          <p class="card-text">Este curso estará disponible a partir del 1 de Octubre</p>
-          <p class="card-text">En este curso veremos 13 tutoriales de Bachata Dominicana</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="images/bachata-sensual-daniel-y-leticia.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">NOVIEMBRE 2021</h5>
-          <p class="card-text">Este es el Segundo Curso de Bachata Sensual de esta estupenda pareja .</p>
-          <p class="card-text">Nuevo curso  premium solo disponible para los suscriptores</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="images/bachata-estilo-chica-deisy.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">DICIEMBRE 2021</h5>
-          <p class="card-text">Tercer curso de bachata Lady style con Deisy Carrera.</p>
-          <p class="card-text">En este curso Deisy sigue avanzando con los pasos y movimientos más elaborados</p>
-        </div>
-      </div>
-    </div>
-  </div> 
-            
-
+  {{ include('proximos_cursos/index.html.twig') }}
+  
 </main>
 
-<footer class="footer bg-dark rounded-top text-center">
-  <div class="container py-2">
-    <p class="text-white my-2">
-      &copy; Adolfo de la Rosa
-    </p>
-  </div>
-</footer>
+{{ include('comunes/_footer.html.twig') }}
 
 {% endblock %}

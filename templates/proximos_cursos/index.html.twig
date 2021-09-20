@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salsa Bachata Online{% endblock %}
+
+{% block body %}
+<style>
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</style>
+
+  <div class="starter-template text-center py-5 px-3">
+    <h1 class="display-5">Calendario de Próximos Cursos</h1>
+    <p class="lead"></p>
+    <h4>Todos los meses subimos un Curso Nuevo.</h4>
+    <p class="lead">Estos son los cursos que subiremos en los proximos meses:</p>
+    <p class="lead font-weight"></p>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="images/bachata-dominicana-Basi-y-Deisy-2.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">OCTUBRE 2021</h5>
+          <p class="card-text">Este curso estará disponible a partir del 1 de Octubre</p>
+          <p class="card-text">En este curso veremos 13 tutoriales de Bachata Dominicana</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="images/bachata-sensual-daniel-y-leticia.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">NOVIEMBRE 2021</h5>
+          <p class="card-text">Este es el Segundo Curso de Bachata Sensual de esta estupenda pareja .</p>
+          <p class="card-text">Nuevo curso  premium solo disponible para los suscriptores</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="images/bachata-estilo-chica-deisy.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">DICIEMBRE 2021</h5>
+          <p class="card-text">Tercer curso de bachata Lady style con Deisy Carrera.</p>
+          <p class="card-text">En este curso Deisy sigue avanzando con los pasos y movimientos más elaborados</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+{% endblock %}

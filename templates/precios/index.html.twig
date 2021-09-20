@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salsa Bachata Online{% endblock %}
+
+{% block body %}
+<style>
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</style>
+
+
+  <!-- Pricing section-->
+  <section class="bg-light py-5">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h1 class="fw-bolder">Cuenta Premium </h1>
+        <p class="lead fw-normal text-muted mb-0">Acceso ilimitado</p>
+      </div>
+      <div class="row gx-5 justify-content-center">
+        <!-- Pricing card pro-->
+        <div class="col-lg-6 col-xl-4">
+          <div class="card mb-5 mb-xl-0">
+            <div class="card-body p-5">
+              <div class="small text-uppercase fw-bold">
+                <i class="bi bi-star-fill text-warning"></i>
+                Premium
+              </div>
+              <div class="mb-3">
+                <span class="display-4 fw-bold">9€</span>
+                <span class="text-muted">Mensual</span>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2">
+                  <i class="bi bi-check text-primary"></i>
+                    <strong>Acceso a todos los cursos</strong>
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check text-primary"></i>
+                    Incluye todos los Profesores
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check text-primary"></i>
+                    Contenidos nuevos todas los meses
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check text-primary"></i>
+                    Soporte y ayuda de todas las clases de Basi y Deisy
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check text-primary"></i>
+                    Este precio se te mantiene siempre que mantengas tu Suscripción activa
+                  </li>                            
+                </ul>
+                <div class="d-grid"><a class="btn btn-primary btn-block" href="#!">Seleccionar Plan</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

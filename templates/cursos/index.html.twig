@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salsa Bachata Online{% endblock %}
+
+{% block body %}
+<style>
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</style>
+
+{{ include('comunes/_header.html.twig') }}
+
+<main class="container py-5 px-3">
+    {{ include('cursos_actuales/index.html.twig') }}
+
+    <!-- Próximos Cursos -->
+    {{ include('proximos_cursos/index.html.twig') }}
+
+</main>
+
+{{ include('comunes/_footer.html.twig') }}
+{% endblock %}
