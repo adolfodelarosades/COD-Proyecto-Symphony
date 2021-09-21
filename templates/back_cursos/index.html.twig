@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cursos{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+{% endblock %}
+
+{% block body %}
+
+  {{ include('comunes/_backheader.html.twig') }}  
+  <main class="container py-4">
+    <h1 class="text-center">Cursos</h1>
+
+    {# dump editoriales #} <!-- Lo saca a la consola-->
+    
+    <p> </p>
+    <div class="text-left">
+      <a class="btn btn-secondary" href="{{ path('back_cursos')}}" role="button">Nuevo Curso</a>
+    </div>
+    <p> </p>
+    {% include 'comunes/_mensajes.html.twig' %}
+    <table class="table table-striped">
+    <thead>
+        <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>       
+        <th scope="col">Acciones</th>     
+        </tr>
+    </thead>
+    <tbody>
+        {% for curso in cursos %}
+        <tr>
+            <td> {{ curso.id }}</td>
+            <td> {{ curso.titulo }}</td>
+            <td>
+              <a href="{{ path('back_cursos', {id: curso.id}) }}"><i class="fa fa-search" style="font-size:24px;color:grey;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="{{ path('back_cursos', {id: curso.id}) }}"><i class="fa fa-trash" style="font-size:24px;color:grey;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="{{ path('back_cursos', {id: curso.id}) }}"><i class="fa fa-pencil" style="font-size:24px;color:grey;"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+  </main>
+{% endblock %}
