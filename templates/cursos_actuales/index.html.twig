@@ -19,44 +19,30 @@
 
   <div class="example-wrapper">
     <!-- Sección Cursos -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
+    
+      {% for curso in cursos %}
+    {% if (loop.index == 1 ) %}
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% endif %}
+    
+       <div class="col">
         <div class="card">
-          <img src="images/clases-online-de-salsa-basi-y-deisy.jpeg" class="card-img-top" alt="...">
+          <img src="{{ curso.urlFoto }}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">SALSA ON1 – BASI Y DEISY</h5>
-            <p class="card-text">Con este curso aprenderas a bailar Salsa en Línea ON1.</p>
+            <h5 class="card-title">{{ curso.titulo }} – {{ curso.profesor.nombre }}</h5>
+            <p class="card-text">{{ curso.descripcion }}</p>
             <button type="button" class="btn btn-outline-primary btn-block">
                 Ver más...
             </button>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card">
-          <img src="images/clases-de-bachata-online-basi-y-deisy.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">BACHATA ELEGANTE BASI Y DEISY – VOL1</h5>
-            <p class="card-text">Con este curso aprenderas a bailar Bachata.</p>
-            <button type="button" class="btn btn-outline-primary btn-block">
-                Ver más...
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="images/bachata-estilo-femenino-deisy-carrera.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">BACHATA LADY STYLE NIVEL BÁSICO-MEDIO</h5>
-            <p class="card-text">Con este curso aprenderas a bailar Lady Styles Básico.</p>
-            <button type="button" class="btn btn-outline-primary btn-block">
-                Ver más...
-            </button>
-          </div>
-        </div>
-      </div>
-    </div> 
-  </div>
+      {% if (loop.index == 3) %}
+        </div> 
+      {% endif %}
+    {% endfor %}
 
+      
+    
+      
 {% endblock %}
